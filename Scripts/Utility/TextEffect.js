@@ -67,8 +67,6 @@ export class TextEffect {
 
     //if word is complete
     if (!this.isDeleting && this.txt === fullTxt) {
-      //   document.querySelector(".txt-type").style.backgroundColor = "lightgrey";
-      //   document.querySelector(".txt-type").style.color = "#333";
       //Make pause at the end
       typeSpeed = this.wait;
       //Set delete to true
@@ -85,9 +83,7 @@ export class TextEffect {
 }
 export function init(h1, wordss) {
   const getWords = wordss;
-  console.log(getWords);
   const words = JSON.parse(getWords);
 
-  console.log(words);
   new TextEffect(h1, words);
 }
