@@ -1,10 +1,11 @@
-import { TextEffect, init } from "./TextEffect.js";
-import { Attribute } from "./Attribute.js";
+import { TextEffect, init } from "../Utilities/TextEffect.js";
+import { Attribute } from "../Utilities/Attribute.js";
 
 class HomePage extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this.attributeEnabler = false;
   }
 
   connectedCallback() {
@@ -28,7 +29,6 @@ class HomePage extends HTMLElement {
           
           .home{
             height: 100vh;
-            overflow: hidden;
           }
 
           .home .content{
@@ -245,6 +245,10 @@ class HomePage extends HTMLElement {
 
           /*Responsive */
           @media screen and (max-width: 768px){
+          
+            .contText nav p{
+              margin-left: -1rem;
+            }
             .content .cont .contText .main h1{
               font-size: 4rem;
             }
@@ -373,7 +377,10 @@ class HomePage extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue) {
       if (oldValue !== newValue) {
-        Attribute.attributeFn(this._nextElementId, this);
+        this.attributeEnabler = !this.attributeEnabler;
+        if (this.attributeEnabler) {
+          Attribute.attributeFn(this._nextElementId, this);
+        }
       }
     }
   }

@@ -14,7 +14,7 @@ export class Perspective {
   }
 
   clickHandler(event) {
-    this.resizeContainer();
+    // this.resizeContainer();
 
     this.perspectiveFunction(event);
   }
@@ -27,7 +27,6 @@ export class Perspective {
 
   perspectiveFunction(event) {
     // a ternary operator that uses the event.target property to check what button was clicked by the user
-    console.log(event.target);
 
     const show = event.target.classList.contains("next")
       ? "nextElementSibling"
