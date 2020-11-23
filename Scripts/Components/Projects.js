@@ -4,10 +4,13 @@ class Projects extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this.attributeEnabler = true;
     this._nextElementId;
     this.counter;
     this.numberOfProjects;
     this.enableButton = true;
+    this.projects = this.getAttribute("projects");
+    console.log(JSON.parse(this.projects));
     // this.attributeEnabler = true;
   }
 

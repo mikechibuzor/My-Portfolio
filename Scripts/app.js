@@ -25,9 +25,7 @@ const attributeChangeFunction = (event) => {
   const compContChildren = Array.from(componentsContainer.children);
 
   compContChildren.forEach((component) => {
-    console.log(viewElementId);
     if (component.id === viewElementId) {
-      console.log(viewElementId);
       component.setAttribute("class", "visible");
     }
   });
