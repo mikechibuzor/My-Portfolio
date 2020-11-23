@@ -24,6 +24,12 @@ class Projects extends HTMLElement {
         box-sizing: border-box;
       }
 
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
       :host{
             position: absolute;
             width: 100%;
@@ -82,6 +88,7 @@ class Projects extends HTMLElement {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
+      
         grid-gap: 2rem;
         padding: 2rem;
         position: absolute;
@@ -183,6 +190,7 @@ class Projects extends HTMLElement {
 
       main .cont >*{
         grid-column: 1/3;
+          grid-auto-rows: 50%;
       }
         
       nav{
@@ -201,6 +209,7 @@ class Projects extends HTMLElement {
          height: 7vh;
        }
       }
+
 
 
     </style>
@@ -358,7 +367,7 @@ class Projects extends HTMLElement {
     const prjStructure = document.createElement("div");
     prjStructure.innerHTML = `
       <div class="projectImage" style="background-color: white">
-        ${projectImage}
+        <img src="${projectImage}" alt="" />
       </div>
 
       <div class="projectText" style="background-color: pink">
