@@ -9,8 +9,7 @@ class Projects extends HTMLElement {
     this.counter;
     this.numberOfProjects;
     this.enableButton = true;
-    this.projects = this.getAttribute("projects");
-    console.log(JSON.parse(this.projects));
+    this.projects = JSON.parse(this.getAttribute("projects"));
     // this.attributeEnabler = true;
   }
 
@@ -112,17 +111,7 @@ class Projects extends HTMLElement {
         pointer-events: none;
         opacity: 0;
         
-      }
-
-      /*
-      .projectImage{
-        animation: animateProjectImage .5s linear forwards;
-      }
-      .projectText{
-        animation: animateProjectText .5s linear forwards;
-      }*/
-
-      
+      }      
 
       /* Animation */
       @keyframes animateProjectImage{
@@ -225,45 +214,7 @@ class Projects extends HTMLElement {
 
         <main class="pmain">
 
-         <div class="cont visible">
-
-            <div class="projectImage" style="background-color: white">2
-            </div>
-
-            <div class="projectText" style="background-color: pink">3
-            </div>
-
-         </div>
-
-         <div class="cont hidden">
          
-            <div class="projectImage" style="background-color: blue">22
-            </div>
-
-            <div class="projectText" style="background-color: black">33
-            </div>
-
-         </div>
-
-        <div class="cont hidden">
-         
-            <div class="projectImage" style="background-color: green">42
-            </div>
-
-            <div class="projectText" style="background-color: chocolate">43
-            </div>
-
-         </div> 
-        <div class="cont hidden">
-         
-            <div class="projectImage" style="background-color: red">52
-            </div>
-
-            <div class="projectText" style="background-color: yellow">53
-            </div>
-
-         </div> 
-
         </main>
 
         <footer class="pfooter">
@@ -278,6 +229,11 @@ class Projects extends HTMLElement {
         </footer>
       </div>
     `;
+
+    this.dyanmicProject();
+
+    // sets the first project to be visible
+    this.shadowRoot.querySelectorAll(".cont")[0].classList = "cont visible";
 
     this.container = this.shadowRoot.querySelector(".container");
     this.buttons = this.shadowRoot.querySelectorAll(".btn");
@@ -390,6 +346,27 @@ class Projects extends HTMLElement {
         }
       }
     }
+  }
+
+  dyanmicProject() {
+    this.projects.forEach((project) => {
+      this.projectStructure(project.projectImage, project.projectText);
+    });
+  }
+
+  projectStructure(projectImage, projectText) {
+    const prjStructure = document.createElement("div");
+    prjStructure.innerHTML = `
+      <div class="projectImage" style="background-color: white">
+        ${projectImage}
+      </div>
+
+      <div class="projectText" style="background-color: pink">
+        ${projectText}
+      </div>
+    `;
+    prjStructure.classList = "cont hidden";
+    this.shadowRoot.querySelector(".pmain").appendChild(prjStructure);
   }
 }
 
