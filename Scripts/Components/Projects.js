@@ -27,7 +27,7 @@ class Projects extends HTMLElement {
       img{
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
       }
 
       :host{
@@ -88,7 +88,7 @@ class Projects extends HTMLElement {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-      
+        grid-auto-rows: 100%;
         grid-gap: 2rem;
         padding: 2rem;
         position: absolute;
@@ -160,6 +160,7 @@ class Projects extends HTMLElement {
       footer .buttons{
         display: flex;
         justify-content: space-evenly;
+       
       }
 
       footer p{
@@ -169,6 +170,16 @@ class Projects extends HTMLElement {
         border-radius: .2rem;
         transition: transform .2s ease-in-out;
         cursor: pointer;
+        height: 1.5rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      footer svg{
+        width: 100%;
+        height: 100%;
       }
 
       footer p:nth-of-type(1){
@@ -188,9 +199,12 @@ class Projects extends HTMLElement {
 
       @media screen and (max-width: 768px){
 
+        main .cont{
+          grid-auto-rows: 50%;
+        }
       main .cont >*{
         grid-column: 1/3;
-          grid-auto-rows: 50%;
+          
       }
         
       nav{
@@ -232,8 +246,16 @@ class Projects extends HTMLElement {
           </div>
 
           <div class="buttons">
-            <p id="previous" class="btn">Previous</p>
-            <p id="next" class="btn">Next</p>
+            <p id="previous" class="btn">
+              <svg class="previous" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path class="previous" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+              </svg>
+            </p>
+            <p id="next" class="btn">
+              <svg class="next" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path class="next" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </p>
           </div>
         </footer>
       </div>
@@ -290,13 +312,15 @@ class Projects extends HTMLElement {
     if (this.counter === 1 || this.counter === this.numberOfProjects) {
       this.enableButton = true;
     }
+
     if (!this.enableButton) {
       return;
     }
 
     this.hide = this.shadowRoot.querySelector(".visible");
+
     const elementChooser =
-      event.target.id === "next"
+      event.currentTarget.id === "next"
         ? "nextElementSibling"
         : "previousElementSibling";
     this.show = this.hide[elementChooser];

@@ -144,7 +144,7 @@ class HomePage extends HTMLElement {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0 2rem;
+            padding: 0 1rem;
             text-align: center;
             transition: all 4s linear;
           }
