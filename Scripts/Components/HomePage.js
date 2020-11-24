@@ -61,7 +61,7 @@ class HomePage extends HTMLElement {
           .home .content .menu .menu-body ul li{
             padding: 1.5rem;
             font-size: 150%;
-            font-family: cursive;
+            
             cursor: pointer;
             border-bottom: 1px solid #eee;
             box-shadow: 0 4px 2px rgba(0, 0, 0, .3);
@@ -126,7 +126,7 @@ class HomePage extends HTMLElement {
             justify-content: space-between;
             padding: 5rem 0;
             flex-direction: column;
-            font-family: "Bell MT", sans-serif;            
+                      
           }
 
           .cont .contText .main .div{

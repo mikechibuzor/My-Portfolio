@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .container {
   position: relative;
   height: 100vh;
@@ -24,5 +28,4 @@ html {
   opacity: 1;
   pointer-events: all;
   z-index: 1;
-  animation: ;
 }
