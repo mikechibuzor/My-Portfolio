@@ -4,6 +4,8 @@ import { Attribute } from "../Utilities/Attribute.js";
 class HomePage extends HTMLElement {
   constructor() {
     super();
+    // The line of code that below attaches this custom element to the DOM so that
+    // The structure and styling will remain within this context
     this.attachShadow({ mode: "open" });
     this.attributeEnabler = false;
   }
@@ -140,7 +142,7 @@ class HomePage extends HTMLElement {
 
           .content .cont .contText .main h1{
             opacity: 0;
-            font-size: 6.5rem;
+            font-size: 6rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -342,10 +344,11 @@ class HomePage extends HTMLElement {
               </div>
               <div class="footer">
                 <p>
-                  <svg color="#ccc" xmlns= enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#ccc" width="18px" height="18px">
-                    <rect fill="none" height="24" width="24"/>
-                    <path d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z"/>
+                  <a href="https://twitter.com/faceOfALion1">
+                  <svg enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M28.348,5.157c-13.6,0-24.625,11.027-24.625,24.625c0,13.6,11.025,24.623,24.625,24.623c13.6,0,24.623-11.023,24.623-24.623  C52.971,16.184,41.947,5.157,28.348,5.157z M40.752,24.817c0.013,0.266,0.018,0.533,0.018,0.803c0,8.201-6.242,17.656-17.656,17.656  c-3.504,0-6.767-1.027-9.513-2.787c0.486,0.057,0.979,0.086,1.48,0.086c2.908,0,5.584-0.992,7.707-2.656  c-2.715-0.051-5.006-1.846-5.796-4.311c0.378,0.074,0.767,0.111,1.167,0.111c0.566,0,1.114-0.074,1.635-0.217  c-2.84-0.57-4.979-3.08-4.979-6.084c0-0.027,0-0.053,0.001-0.08c0.836,0.465,1.793,0.744,2.811,0.777  c-1.666-1.115-2.761-3.012-2.761-5.166c0-1.137,0.306-2.204,0.84-3.12c3.061,3.754,7.634,6.225,12.792,6.483  c-0.106-0.453-0.161-0.928-0.161-1.414c0-3.426,2.778-6.205,6.206-6.205c1.785,0,3.397,0.754,4.529,1.959  c1.414-0.277,2.742-0.795,3.941-1.506c-0.465,1.45-1.448,2.666-2.73,3.433c1.257-0.15,2.453-0.484,3.565-0.977  C43.018,22.849,41.965,23.942,40.752,24.817z"/>
                     </svg>
+                  </a>
                 </p>
                 <p>
                   <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" fill="#ccc" width="18px" height="18px color="#ccc">
