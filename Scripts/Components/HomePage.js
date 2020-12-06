@@ -23,10 +23,12 @@ class HomePage extends HTMLElement {
             margin: 0;
             box-sizing: border-box;
           }
+          
           :host{
             position: absolute;
             width: 100%;
             transition: all 1s ease-in-out;
+            cursor: none;
           }
           
           .home{
@@ -251,6 +253,37 @@ class HomePage extends HTMLElement {
             fill: #ccc;
           }
 
+          .mouse, .mouseDot {
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            // transition-property: background, transform;
+            transform-origin: center;
+            z-index: 1;
+           
+          }
+
+          .mouse{
+              height: 2rem;
+              width: 2rem;
+              transition: all 0.1s linear;
+          }
+
+          .mouseDot{
+            height: .2rem;
+            width: .1rem;
+            background: #ccc;
+            transition: all 0.2s linear;
+          }
+          .mouse.grow {
+            background: #000;
+            padding: 1rem;
+            transform: scale(3);
+          }
+
           /*Responsive */
           @media screen and (max-width: 768px){
           
@@ -285,6 +318,11 @@ class HomePage extends HTMLElement {
               flex: 0 0 0%;
               width: 0%;
             }
+            .footer a svg{
+            height: 1.5rem;
+            width: 1rem;
+            fill: #ccc;
+          }
           }
           @media screen and (max-width: 320px){
             .cont .contText .main .div{
@@ -373,6 +411,8 @@ class HomePage extends HTMLElement {
                   </a>
                 </p>
               </div>
+              <div class="mouse"></div>
+              <div class="mouseDot"></div>
             </div>
         </div>
     `;
@@ -384,11 +424,14 @@ class HomePage extends HTMLElement {
     this._mainContent = this.shadowRoot.querySelector(".cont");
     this._burgerBtn = this.shadowRoot.querySelectorAll(".menuBtn");
     this._navLis = this.shadowRoot.querySelectorAll("ul li");
+    this.mouseDiv = this.shadowRoot.querySelector(".mouse");
+    this.mouseDot = this.mouseDiv.nextElementSibling;
 
     this.getNxtElId_ChnClass(this._navLis);
 
     this.slide();
     this.typingEffectFn();
+    this.mouseEffect(this.mouseDiv, this.mouseDot);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -435,6 +478,15 @@ class HomePage extends HTMLElement {
 
   static get observedAttributes() {
     return ["class"];
+  }
+
+  mouseEffect(mouse, mouseDot) {
+    window.addEventListener("mousemove", (e) => {
+      mouse.style.top = `${e.pageY}px`;
+      mouse.style.left = `${e.pageX}px`;
+      mouseDot.style.top = `${e.pageY}px`;
+      mouseDot.style.left = `${e.pageX}px`;
+    });
   }
 }
 
