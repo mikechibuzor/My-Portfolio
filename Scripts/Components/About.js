@@ -52,7 +52,7 @@ class About extends HTMLElement {
           }
 
            .main{
-            height: 80vh;
+            height: 93vh;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 2rem;
@@ -121,7 +121,7 @@ class About extends HTMLElement {
             .main{
               grid-template-columns: 1fr;
               grid-gap: .5rem;
-              grid-auto-rows: 50%;
+              grid-auto-rows: 40%  60%;
             }
 
             .main .right p{
