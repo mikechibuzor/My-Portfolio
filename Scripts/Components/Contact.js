@@ -50,6 +50,8 @@ class Contact extends HTMLElement {
             border-right: 1px solid black;
             padding-right: 0.5rem;
           }
+
+         
         </style>
 
 
@@ -59,6 +61,8 @@ class Contact extends HTMLElement {
             <p>Contact</p>
             <p class="home" id="1">Home</p>
           </nav>
+
+      
 
         </div>
       `;
