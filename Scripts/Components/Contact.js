@@ -1,8 +1,7 @@
 import { Attribute } from "../Utilities/Attribute.js";
 class Contact extends HTMLElement {
-  constructor(attributeFn) {
+  constructor() {
     super();
-    this._attrFn = attributeFn;
     this.attachShadow({ mode: "open" });
     this.attributeEnabler = true;
   }

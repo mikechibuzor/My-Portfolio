@@ -10,6 +10,8 @@ class Projects extends HTMLElement {
     this.numberOfProjects;
     this.enableButton = true;
     this.projects = JSON.parse(this.getAttribute("projects"));
+    this.numberOfProjects = this.projects.length;
+
     // this.attributeEnabler = true;
   }
 
@@ -27,13 +29,15 @@ class Projects extends HTMLElement {
       img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       :host{
-            position: absolute;
-            width: 100%;
-            transition: all 1s ease-in-out;
+          position: absolute;
+          width: 100%;
+          transition: all 1s ease-in-out;
+          background: #0d0d0d;
+          color: #ccc;
           }
 
       .pcontainer{
@@ -41,13 +45,12 @@ class Projects extends HTMLElement {
         width: 100%;
         height: 100vh;
         display: grid;
-        
-        background: #ccc;
+       
       }
 
-      .pcontainer >*{
-        border: 1px solid red;
-      }
+      // .pcontainer >*{
+      //   border: 1px solid red;
+      // }
 
       nav{
         height: 10vh;
@@ -56,6 +59,7 @@ class Projects extends HTMLElement {
         display: flex;
         align-items: center;
         padding: 0 1.5rem;
+        box-shadow: 2px 2px 2px rgba(233, 233, 233, .3);
       }
 
       nav p{
@@ -71,15 +75,16 @@ class Projects extends HTMLElement {
 
       nav p:nth-of-type(1){
         margin-right: .5rem;
-        border-right: 1px solid black;
+        border-right: 1px solid #ccc;
         padding-right: 0.5rem;
       }
 
       main{
         position: relative;
-         height: 80vh;
+        height: 80vh;
         flex: 0 0 100%;
         width: 100%;
+         background: #ccc;
       }
 
       main .cont{
@@ -105,13 +110,50 @@ class Projects extends HTMLElement {
       }
 
       main .cont >*{
-        border: 1px solid black;
+            
       }
+      main .cont .projectImage{
+          cursor: pointer;
+          overflow: hidden;
+      }
+
+      main .cont .projectImage img{
+        transition: all .3s linear;
+      }
+      main .cont .projectImage:hover img{
+          transform: scale(1.03);
+      }
+
+      main .cont .projectText h2{
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      main .cont .projectText ul{
+        list-style: none;
+      }
+
+      main .cont .projectText ul li{
+           padding-left: .5rem;
+           padding-top: .2rem;
+         }
+
+      main .cont .projectText p{
+         line-height: 1.8rem;
+         font-size: 1.4rem;
+
+       }
+      
+      main .cont .projectText h4{
+        margin: 1rem;
+        margin-left: 0rem;
+        font-size: 1.5rem;
+      }
+
 
       main .cont.visible{
         pointer-events: all;
-        opacity: 1;
-       
+        opacity: 1;       
       }
 
       main .cont.hidden{
@@ -162,12 +204,15 @@ class Projects extends HTMLElement {
         justify-content: space-evenly;
        
       }
-
+      footer #counter{
+        opacity: .6;
+      }
       footer p{
         margin: 0 .3rem;
         border: 1px solid black;
         padding: .2rem .5rem;
         border-radius: .2rem;
+        border: 1px solid #ccc;
         transition: transform .2s ease-in-out;
         cursor: pointer;
         height: 1.5rem;
@@ -192,6 +237,10 @@ class Projects extends HTMLElement {
 
       footer p:hover{
         transform: scale(1.2);
+        background: #ccc;
+      }
+      footer p:hover svg path{
+        stroke: black;
       }
 
     
@@ -199,12 +248,12 @@ class Projects extends HTMLElement {
 
       @media screen and (max-width: 768px){
 
-        main .cont{
+      main .cont{
           grid-auto-rows: 50%;
-        }
+      }
+
       main .cont >*{
-        grid-column: 1/3;
-          
+        grid-column: 1/3;  
       }
         
       nav{
@@ -212,6 +261,7 @@ class Projects extends HTMLElement {
         padding-left: 1rem;
         font-size: 90%;
       }
+
       main{
         height: 86vh;
       }
@@ -242,7 +292,7 @@ class Projects extends HTMLElement {
 
         <footer class="pfooter">
           <div class="pagination">
-            <h4 id="counter"><span id="currentCount">1</span> of <span id="endCount">4</span></h4>
+            <h4 id="counter"><span id="currentCount">1</span> of <span id="endCount">${this.numberOfProjects}</span></h4>
           </div>
 
           <div class="buttons">
@@ -362,8 +412,6 @@ class Projects extends HTMLElement {
 
   pageCounter(buttonClicked, currentCount) {
     if (this.enableButton) {
-      const pmain = this.shadowRoot.querySelector(".pmain");
-      this.numberOfProjects = pmain.children.length;
       const regEx = /next/g;
       this.counter = Number(currentCount.textContent);
 
@@ -390,16 +438,40 @@ class Projects extends HTMLElement {
   projectStructure(projectImage, projectText) {
     const prjStructure = document.createElement("div");
     prjStructure.innerHTML = `
-      <div class="projectImage" style="background-color: white">
+      <div class="projectImage" style="background-color: inherit">
         <img src="${projectImage}" alt="" />
       </div>
 
-      <div class="projectText" style="background-color: pink">
-        ${projectText}
+      <div class="projectText" style="color: #000">
+        <h2>About the Project: <em>${projectText[0]}</em></h2>
+        <p>${projectText[1]}.</p>
+        <h4>Tech Used to build this project:</h4>
+        <ul id="techList">
+        </ul>
       </div>
     `;
+    this.listTechStack(
+      prjStructure.querySelector("#techList"),
+      projectText[2],
+      projectText[3]
+    );
     prjStructure.classList = "cont hidden";
     this.shadowRoot.querySelector(".pmain").appendChild(prjStructure);
+  }
+
+  listTechStack(ul, techStack, link) {
+    const tStack = techStack.split(",");
+    tStack.forEach((tS) => {
+      const li = document.createElement("li");
+      li.innerHTML = `<li>${tS}</li>`;
+      ul.appendChild(li);
+    });
+    const links = document.createElement("p");
+    links.innerHTML = `<p>
+                          <a href="${link}">View Live</a>
+                          <a href="${link}">View Code</a>                          
+                      </p>`;
+    ul.appendChild(links);
   }
 }
 

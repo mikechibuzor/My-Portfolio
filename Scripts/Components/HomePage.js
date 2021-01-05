@@ -45,7 +45,7 @@ class HomePage extends HTMLElement {
             height: 100%;    
             width: 0%;   
             transition: all .5s linear; 
-            flex;
+            display: flex;
             flex-direction: column;    
           }
           .home .content .menu .menu-header{
@@ -203,12 +203,12 @@ class HomePage extends HTMLElement {
           .home .content .cont .contText .btn p::after{
             position: absolute;
             content: '';
-            height: .15rem;
+            height: .1rem;
             background: #ccc;
             right: 0;
             width: 0%;
             transition: all .5s linear;
-            bottom: -1px;
+            bottom: 0px;
           }
 
           .home .content .cont .contText .btn p:hover::after{
@@ -339,7 +339,7 @@ class HomePage extends HTMLElement {
             }
             .footer a svg{
             height: 1.5rem;
-            width: 1rem;
+            width: 1.5rem;
             fill: #ccc;
           }
           }
@@ -442,7 +442,7 @@ class HomePage extends HTMLElement {
                     ></span>
                   </h1>
                 </div>
-                <div class="btn"><p>My works</p></div>
+                <div class="btn"><p>Download CV</p></div>
               </div>
               <div class="footer">
                 <p>

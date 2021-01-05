@@ -2,9 +2,8 @@ import { Attribute } from "../Utilities/Attribute.js";
 class About extends HTMLElement {
   constructor(attributeFn) {
     super();
-    this._attrFn = attributeFn;
-    this.attachShadow({ mode: "open" });
     this.attributeEnabler = true;
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -153,7 +152,7 @@ class About extends HTMLElement {
                 <span class="highlight">Iwuagwu Chibuzor</span> is a Creative, Design-Focused, Self-taught, Frontend Web Developer studying Computer Science at the University of Ibadan.
               </p>
               <p>
-                 His one year-plus experience in the web space has given him vast and grounded knowledge in the technologies needed to create that <span class="highlight">rich web experience.</span>
+                 His one year-plus experience in the web space has given him vast and grounded knowledge in the technologies needed to create that <span class="highlight">rich web experience</span>(Aesthetic, Fast, Interactive and Responsive Websites/Web Applications.)
               </p>
               <p>
                  When Chibuzor is not trying to make the world a better place with coding the web, he is doing so by genuinely making people feel good about themselves with
