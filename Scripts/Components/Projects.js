@@ -438,17 +438,17 @@ class Projects extends HTMLElement {
   projectStructure(projectImage, projectText) {
     const prjStructure = document.createElement("div");
     prjStructure.innerHTML = `
-      <div class="projectImage" style="background-color: inherit">
-        <img src="${projectImage}" alt="" />
-      </div>
+        <div class="projectImage" style="background-color: inherit">
+          <img src="${projectImage}" alt="" />
+        </div>
 
-      <div class="projectText" style="color: #000">
-        <h2>About the Project: <em>${projectText[0]}</em></h2>
-        <p>${projectText[1]}.</p>
-        <h4>Tech Used to build this project:</h4>
-        <ul id="techList">
-        </ul>
-      </div>
+        <div class="projectText" style="color: #000">
+          <h2>About the Project: <em>${projectText[0]}</em></h2>
+          <p>${projectText[1]}.</p>
+          <h4>Tech Used to build this project:</h4>
+          <ul id="techList">
+          </ul>
+        </div>
     `;
     this.listTechStack(
       prjStructure.querySelector("#techList"),

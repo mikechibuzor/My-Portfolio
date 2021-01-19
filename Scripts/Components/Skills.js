@@ -154,10 +154,10 @@ class Skills extends HTMLElement {
 
            @media screen and (max-width: 414px){
             .content .first .techSkills{
-              grid-auto-rows: 50%;
+              grid-auto-rows: 45%;
             }
              .content .second{
-              margin-top: -5rem;     
+              margin-top: -8.2rem;     
             }
              .content .second ul{
               grid-row-gap: .7rem;
@@ -168,15 +168,20 @@ class Skills extends HTMLElement {
             .content .first .techSkills {
               margin-top: -1rem;
               grid-row-gap: .2rem;
+              grid-auto-rows: 40%;
            }
            .content .first h1{
              font-size: 1.7rem;
+             margin-top: -.3rem;
            }
-             .content .second{
-              margin-top: -6.5rem;     
+            .content .second{ 
+              padding-top: 0;  
+              background: blue; 
             }
+        
              .content .second ul{
               grid-row-gap: .5rem;
+              margin-top: -2.2rem;
             }
           }
 
