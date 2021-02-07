@@ -172,16 +172,15 @@ class Skills extends HTMLElement {
            }
            .content .first h1{
              font-size: 1.7rem;
-             margin-top: -.3rem;
            }
             .content .second{ 
-              padding-top: 0;  
-              background: blue; 
+              padding-top: 0;
+              height: auto;  
             }
-        
+
              .content .second ul{
               grid-row-gap: .5rem;
-              margin-top: -2.2rem;
+              
             }
           }
 
