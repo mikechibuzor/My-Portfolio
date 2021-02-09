@@ -155,7 +155,7 @@ class About extends HTMLElement {
                  His one year-plus experience in the web space has given him vast and grounded knowledge in the technologies needed to create that <span class="highlight">rich web experience</span>(Aesthetic, Fast, Interactive and Responsive Websites/Web Applications.)
               </p>
               <p>
-                 When Chibuzor is not trying to make the world a better place with coding the web, he is doing so by genuinely making people feel good about themselves with
+                 When Chibuzor is not trying to make the world a better place with coding the web, he is doing so by genuinely making people feel good about themselves.
               </p>
             </div>
           </div>

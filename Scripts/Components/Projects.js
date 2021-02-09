@@ -48,10 +48,6 @@ class Projects extends HTMLElement {
        
       }
 
-      // .pcontainer >*{
-      //   border: 1px solid red;
-      // }
-
       nav{
         height: 10vh;
         flex: 0 0 100%;
@@ -243,9 +239,6 @@ class Projects extends HTMLElement {
         stroke: black;
       }
 
-    
-
-
       @media screen and (max-width: 768px){
 
       main .cont{
@@ -269,12 +262,35 @@ class Projects extends HTMLElement {
         grid-column: 1/3;
       }
 
+      main .cont .projectText h2{
+        font-size: 1.4rem;
+      }
+      main .cont .projectText h4{
+        font-size: 1rem;
+      }
+      main .cont .projectText p{
+         font-size: 1.1rem;
+         line-height: 1.15rem;
+         text-align: justify;
+         margin-top: -.5rem;
+       }
+
+       #techList{
+         margin-top: -1rem;
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+       }
+
+       #techList .links{
+         grid-column: 1/4;
+         margin-top: 1.3rem;
+         display: flex;
+         justify-content: center;
+       }
       footer{
          height: 7vh;
        }
       }
-
-
 
     </style>
 
@@ -467,7 +483,7 @@ class Projects extends HTMLElement {
       ul.appendChild(li);
     });
     const links = document.createElement("p");
-    links.innerHTML = `<p>
+    links.innerHTML = `<p class="links">
                           <a href="${link}">View Live</a>
                           <a href="${link}">View Code</a>                          
                       </p>`;

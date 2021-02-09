@@ -73,6 +73,13 @@ class Skills extends HTMLElement {
             border: 1px solid black;
             //  height: 20vh;
             cursor: pointer;
+            transition: all .3s ease-in;
+          }
+
+          .content .first .techSkills .stack:hover{
+            border: none;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2),
+                        -4px -4px 4px #eee;
           }
 
           .content .first .techSkills .stack p{
