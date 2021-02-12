@@ -67,10 +67,10 @@ class Skills extends HTMLElement {
             grid-gap: .5rem;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-auto-rows: 85%;
+            grid-auto-rows: 18%;
           }
           .content .first .techSkills .stack{
-            border: 1px solid black;
+            padding-top: 1rem;
             //  height: 20vh;
             cursor: pointer;
             transition: all .3s ease-in;
@@ -81,9 +81,20 @@ class Skills extends HTMLElement {
             box-shadow: 2px 2px 2px rgba(0, 0, 0, .2),
                         -4px -4px 4px #eee;
           }
+          .content .first .techSkills .stack .img{
+            height: 70%;
+          }
+
+          .content .first .techSkills .stack img{
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
 
           .content .first .techSkills .stack p{
             text-align: center;
+            font-weight: bold;
+            height: 10%;
           }
 
           .content .second{
@@ -131,14 +142,19 @@ class Skills extends HTMLElement {
 
             .content .first .techSkills{
               grid-gap: .3rem;
+              height: 30vh;
+            }
+
+            .content .first .techSkills .stack{
+              padding: 0 0 .2rem 0;
+            }
+
+            .content .first .techSkills p{
+              font-size: .8rem;
             }
 
             .content>*{
               padding: 0.2rem 0.5rem;
-            }
-
-            .content .first .techSkills{
-              grid-auto-rows: 70%;
             }
 
             .content .first{
@@ -156,6 +172,7 @@ class Skills extends HTMLElement {
 
             .content .first .techSkills .stack{
               margin-top: .5rem;
+              grid-auto-rows: 2.5vh;
             }
           }
 
@@ -234,6 +251,7 @@ class Skills extends HTMLElement {
               <div class="techSkills">
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/html5.png" alt="html" />
                   </div>
                   <p>HTML5</p>
                 </div>
@@ -244,16 +262,19 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/JavaScript logo.png" alt="html" />
                   </div>
                   <p>JavaScript</p>
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/Vuelogo.jpg" alt="vue logo" />
                   </div>
                   <p>VueJs</p>
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/tailwindcsslogo.jpeg" alt="ta" />
                   </div>
                   <p>Tailwindcss</p>
                 </div>
@@ -269,6 +290,7 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/git.png" alt="git logo" />
                   </div>
                   <p>Version Control/Git</p>
                 </div>
