@@ -209,6 +209,14 @@ class Skills extends HTMLElement {
             }
           }
 
+          @media screen and (min-height: 960px){
+            .content .second{
+              margin-top: -1rem;     
+            }
+            .content .first .techSkills {
+              grid-auto-rows: 18vh;
+          }
+          }
            @media screen and (height: 640px) {
             .content .first .techSkills{
                margin-top: -1rem;
@@ -300,7 +308,7 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="Images/respweb.jpg" alt="Responsive Web Design" />
+                    <img src="../Images/respweb.jpg" alt="Responsive Web Design" />
                   </div>
                   <p>Responsive Design</p>
                 </div>
