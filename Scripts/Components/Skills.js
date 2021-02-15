@@ -67,7 +67,7 @@ class Skills extends HTMLElement {
             grid-gap: .5rem;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-auto-rows: 18%;
+            grid-auto-rows: 15%;
           }
           .content .first .techSkills .stack{
             padding-top: 1rem;
@@ -257,34 +257,37 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/css.png" alt="Css Logo" />
                   </div>
                   <p>CSS3</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/JavaScript logo.png" alt="html" />
+                    <img src="../Images/JavaScript logo.png" alt="JavaScript logo" />
                   </div>
                   <p>JavaScript</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/Vuelogo.jpg" alt="vue logo" />
+                    <img src="../Images/Vuelogo.jpg" alt="Vue logo" />
                   </div>
                   <p>VueJs</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/tailwindcsslogo.jpeg" alt="ta" />
+                    <img src="../Images/tailwindcsslogo.jpeg" alt="tailwindcss logo" />
                   </div>
                   <p>Tailwindcss</p>
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/sass.png" alt="Sass logo" />
                   </div>
                   <p>Sass</p>
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/figmaa.png" alt="Figma Logo" />
                   </div>
                   <p>Figma</p>
                 </div>
@@ -296,6 +299,7 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
+                    <img src="../Images/respweb.jpg" alt="Responsive Web Design" />
                   </div>
                   <p>Responsive Design</p>
                 </div>
