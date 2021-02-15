@@ -78,6 +78,7 @@ class Skills extends HTMLElement {
 
           .content .first .techSkills .stack:hover{
             border: none;
+            transform: translateY(-.3rem);
             box-shadow: 2px 2px 2px rgba(0, 0, 0, .2),
                         -4px -4px 4px #eee;
           }
@@ -251,55 +252,55 @@ class Skills extends HTMLElement {
               <div class="techSkills">
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/html5.png" alt="html" />
+                    <img src="Images/html5.png" alt="html" />
                   </div>
                   <p>HTML5</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/css.png" alt="Css Logo" />
+                    <img src="Images/css.png" alt="Css Logo" />
                   </div>
                   <p>CSS3</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/JavaScript logo.png" alt="JavaScript logo" />
+                    <img src="Images/JavaScript logo.png" alt="JavaScript logo" />
                   </div>
                   <p>JavaScript</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/Vuelogo.jpg" alt="Vue logo" />
+                    <img src="Images/Vuelogo.jpg" alt="Vue logo" />
                   </div>
                   <p>VueJs</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/tailwindcsslogo.jpeg" alt="tailwindcss logo" />
+                    <img src="Images/tailwindcsslogo.jpeg" alt="tailwindcss logo" />
                   </div>
                   <p>Tailwindcss</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/sass.png" alt="Sass logo" />
+                    <img src="Images/sass.png" alt="Sass logo" />
                   </div>
                   <p>Sass</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/figmaa.png" alt="Figma Logo" />
+                    <img src="Images/figmaa.png" alt="Figma Logo" />
                   </div>
                   <p>Figma</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/git.png" alt="git logo" />
+                    <img src="Images/git.png" alt="git logo" />
                   </div>
                   <p>Version Control/Git</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="../Images/respweb.jpg" alt="Responsive Web Design" />
+                    <img src="Images/respweb.jpg" alt="Responsive Web Design" />
                   </div>
                   <p>Responsive Design</p>
                 </div>
