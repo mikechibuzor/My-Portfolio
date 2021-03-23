@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  font-family: "Poppins", "Bell MT", sans-serif;
+  /* font-family: "Poppins", "Bell MT", sans-serif; */
+  font-family: "Nunito", sans-serif;
 }
 
 .container {

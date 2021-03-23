@@ -44,7 +44,7 @@ class HomePage extends HTMLElement {
             flex: 0 0 0%;
             height: 100%;    
             width: 0%;   
-            transition: all .5s linear; 
+            transition: all .25s linear; 
             display: flex;
             flex-direction: column;    
           }
@@ -102,7 +102,7 @@ class HomePage extends HTMLElement {
             height: 100%;
             display: flex;
             flex-wrap: wrap;
-            transition: all .5s linear;  
+            transition: all .25s linear;  
           }
 
           .home .content .menu.slide{
@@ -190,21 +190,30 @@ class HomePage extends HTMLElement {
           }
 
           .home .content .cont .contText .btn p{
-            color: #777;
+            
             position: relative;
             transition: all .5s linear;
             cursor: pointer;
           }
 
+          .home .content .cont .contText .btn p a{
+            color: #777;
+            text-decoration: none;
+          }
+
+          .home .content .cont .contText .btn p a:hover{
+            color: #f7a310;
+          }
+
           .home .content .cont .contText .btn p:hover{
-            color: #ccc;
+            color: #f7a310;
           }
 
           .home .content .cont .contText .btn p::after{
             position: absolute;
             content: '';
             height: .1rem;
-            background: #ccc;
+            background: #f7a310;
             right: 0;
             width: 0%;
             transition: all .5s linear;
@@ -273,7 +282,7 @@ class HomePage extends HTMLElement {
           }
 
           .mouse, .mouseDot {
-            border: 1px solid #ccc;
+            border: 1px solid #f7a310;
             border-radius: 50%;
             position: absolute;
             
@@ -442,7 +451,11 @@ class HomePage extends HTMLElement {
                     ></span>
                   </h1>
                 </div>
-                <div class="btn"><p>Download CV</p></div>
+                <div class="btn">
+                  <p>
+                    <a href="https://drive.google.com/file/d/1Y_60cLLIKxkjPvsj1U48BfwoIgaEpBeO/view?usp=sharing" target="_blank">Download Cv</a>
+                  </p>
+                </div>
               </div>
               <div class="footer">
                 <p>

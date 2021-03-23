@@ -9,11 +9,11 @@ class Skills extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = `
         <style>
-
            :host{
             position: absolute;
             width: 100%;
             transition: all 1s ease-in-out;
+          
           }
           
           .pcontainer{
@@ -22,6 +22,7 @@ class Skills extends HTMLElement {
             height: 100vh;
             display: grid;
             background: #ccc;
+           
           }
 
           nav{
@@ -31,6 +32,7 @@ class Skills extends HTMLElement {
             display: flex;
             align-items: center;
             padding: 0 1.5rem;
+    
           }
 
           nav p{
@@ -55,6 +57,7 @@ class Skills extends HTMLElement {
             grid-template-columns: 70% 30%;
             height: 93vh;
             background: white;
+              background: black;
           }
 
           .content>*{
@@ -73,14 +76,14 @@ class Skills extends HTMLElement {
             padding-top: 1rem;
             //  height: 20vh;
             cursor: pointer;
-            transition: all .3s ease-in;
+            transition: all .2s ease-in;
           }
 
           .content .first .techSkills .stack:hover{
             border: none;
             transform: translateY(-.3rem);
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2),
-                        -4px -4px 4px #eee;
+            // box-shadow: 2px 2px 2px rgba(0, 0, 0, .2),
+            //             -4px -4px 4px #eee;
           }
           .content .first .techSkills .stack .img{
             height: 70%;
@@ -88,9 +91,14 @@ class Skills extends HTMLElement {
 
           .content .first .techSkills .stack img{
             object-fit: contain;
-            width: 100%;
+            width: 100%;          
+            filter: grayscale(var(--value, 100%)); --value:100%;
             height: 100%;
           }
+          .content .first .techSkills .stack:hover img{
+            filter: grayscale(var(--value, 100%)); --value:0%;
+          }
+           
 
           .content .first .techSkills .stack p{
             text-align: center;
@@ -120,6 +128,8 @@ class Skills extends HTMLElement {
             align-items: center;
             border-radius: .15rem .25rem;
             cursor: pointer;
+            background: #6b3e2e;
+            color: white;
           }
 
           .content .second ul li:nth-child(5), 

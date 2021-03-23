@@ -123,7 +123,7 @@ class Contact extends HTMLElement {
           @media screen and (max-width: 768px){
             main .first{
               grid-column: 1/7;
-              padding: 2rem 3rem;
+              padding: 2rem 1.5rem;
             }
 
             main .second{
