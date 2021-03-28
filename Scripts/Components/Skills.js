@@ -276,7 +276,7 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="Images/css.png" alt="Css Logo" />
+                    <img src="Images/css3.png" alt="Css Logo" />
                   </div>
                   <p>CSS3</p>
                 </div>
@@ -288,13 +288,13 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="Images/Vuelogo.jpg" alt="Vue logo" />
+                    <img src="Images/Vue.png" alt="Vue logo" />
                   </div>
                   <p>VueJs</p>
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="Images/tailwindcsslogo.jpeg" alt="tailwindcss logo" />
+                    <img src="Images/tailwind.png" alt="tailwindcss logo" />
                   </div>
                   <p>Tailwindcss</p>
                 </div>
@@ -312,7 +312,7 @@ class Skills extends HTMLElement {
                 </div>
                 <div class="stack">
                   <div class="img">
-                    <img src="Images/git.png" alt="git logo" />
+                    <img src="Images/git2.png" alt="git logo" />
                   </div>
                   <p>Version Control/Git</p>
                 </div>
