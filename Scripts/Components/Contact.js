@@ -73,18 +73,23 @@ class Contact extends HTMLElement {
           main .first form .formElement{
             display: flex;
             flex-direction: column;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             
           }
 
           main .first form .formElement input{
-            padding: .5rem 1rem;
+            padding: .8rem 1rem;
             border-radius: .25rem;
             margin-top: .3rem;
             outline: none;
             border: none;
             box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
           }
+
+           main .first form .formElement label{
+             color: gray;
+             margin-bottom: .3rem;
+           }
 
           main .first form  textarea{
             width: 100%;
@@ -98,7 +103,7 @@ class Contact extends HTMLElement {
 
           main .first form button{
             border-radius: .25rem;
-            padding: .4rem 1rem;
+            padding: .7rem 1rem;
             margin-top: 1.5rem;
             background-color: #0d0d0d;
             color: #ccc;
@@ -153,14 +158,18 @@ class Contact extends HTMLElement {
                 </div>
                 <div class="formElement">
                   <label for="email">
-                    Your name
+                    Your email
                   </label>
                   <input type="email" placeholder="Please enter your email..." id="email" />
                 </div>
-                
-                <textarea placeholder="Please enter your message...">
+                <div class="formElement">
+                   <label for="message">
+                    Your message
+                   </label>
+                   <textarea placeholder="Please enter your message...">
 
-                </textarea>
+                   </textarea>
+                </div>
              
 
                 <button type="submit">

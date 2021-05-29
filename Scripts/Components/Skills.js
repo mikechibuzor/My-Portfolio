@@ -12,8 +12,7 @@ class Skills extends HTMLElement {
            :host{
             position: absolute;
             width: 100%;
-            transition: all 1s ease-in-out;
-          
+            transition: all 1s ease-in-out;          
           }
           
           .pcontainer{
@@ -57,11 +56,9 @@ class Skills extends HTMLElement {
             grid-template-columns: 70% 30%;
             height: 93vh;
             background: white;
-              background: black;
           }
 
           .content>*{
-            //  border: 1px solid red;
             padding: 0rem 1rem;
             height: 100%;
           }
@@ -74,16 +71,16 @@ class Skills extends HTMLElement {
           }
           .content .first .techSkills .stack{
             padding-top: 1rem;
-            //  height: 20vh;
             cursor: pointer;
             transition: all .2s ease-in;
           }
 
           .content .first .techSkills .stack:hover{
             border: none;
+            border-radius: .5rem;
             transform: translateY(-.3rem);
-            // box-shadow: 2px 2px 2px rgba(0, 0, 0, .2),
-            //             -4px -4px 4px #eee;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, .1),
+                        -2px -2px 2px rgba(225, 225, 225, .3);
           }
           .content .first .techSkills .stack .img{
             height: 70%;
@@ -128,8 +125,13 @@ class Skills extends HTMLElement {
             align-items: center;
             border-radius: .15rem .25rem;
             cursor: pointer;
-            background: #6b3e2e;
+            background-color: #000;
+            opacity: .5;
             color: white;
+          }
+
+          .content .second ul li:hover{
+            opacity: .9;
           }
 
           .content .second ul li:nth-child(5), 
