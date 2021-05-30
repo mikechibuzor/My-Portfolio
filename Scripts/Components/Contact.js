@@ -131,7 +131,8 @@ class Contact extends HTMLElement {
             justify-content: center;
              padding: 1rem 3rem;
              border-radius: .5rem;
-             box-shadow: 2px 2px 2px rgba(0, 0, 0, .1);
+             box-shadow: 2px 2px 2px rgba(0, 0, 0, .2),
+                          4px 4px 4px rgba(0, 0, 0, .1);
             background-color: #0d0d0d;
         
           }
