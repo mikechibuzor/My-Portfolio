@@ -66,7 +66,7 @@ class Skills extends HTMLElement {
           .content .first .techSkills{
             grid-gap: .5rem;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: 15%;
           }
           .content .first .techSkills .stack{

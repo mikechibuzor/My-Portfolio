@@ -67,6 +67,8 @@ export class TextEffect {
 
     //if word is complete
     if (!this.isDeleting && this.txt === fullTxt) {
+      // color orange when word complete
+      this.txtElement.classList.toggle("color-orange");
       //Make pause at the end
       typeSpeed = this.wait;
       //Set delete to true
@@ -77,6 +79,8 @@ export class TextEffect {
       this.wordIndex++;
       //pause before start typing
       typeSpeed = 500;
+      // remove color orange
+      this.txtElement.classList.toggle("color-orange");
     }
     setTimeout(() => this.textEffect2(), typeSpeed);
   }

@@ -177,6 +177,7 @@ class HomePage extends HTMLElement {
           }
           .home .content .cont .contText .main h4{
             font-size: 1.5rem;
+            color: #f7a310;
             opacity: 0;
           }
 
@@ -292,6 +293,10 @@ class HomePage extends HTMLElement {
             transform-origin: center;
             z-index: 1;
            
+          }
+
+          .color-orange{
+            color: #f7a310;
           }
 
           .mouse{

@@ -157,11 +157,16 @@ class Contact extends HTMLElement {
             main .first{
               grid-column: 1/7;
               padding: 0rem 1.5rem;
-              
+              margin-top: -2rem;              
             }
 
-            main .second{
-              display: none;
+            main .second .social-media-icons{
+              // transform: rotateZ(-25deg);
+              padding: 0rem 1rem;
+              position: absolute;
+              bottom: 0rem;
+              right: 0rem;
+              background-color: #f7a310;
             }
           }
 
