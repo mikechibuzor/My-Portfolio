@@ -458,7 +458,7 @@ class HomePage extends HTMLElement {
                 </div>
                 <div class="btn">
                   <p>
-                    <a href="https://drive.google.com/file/d/1Y_60cLLIKxkjPvsj1U48BfwoIgaEpBeO/view?usp=sharing" target="_blank">Download Cv</a>
+                    <a href="https://drive.google.com/file/d/1xf8ZO1k3NqLhOEmWWE7sH-locjdkSnhi/view" target="_blank">Download Cv</a>
                   </p>
                 </div>
               </div>
