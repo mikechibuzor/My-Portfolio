@@ -63,17 +63,30 @@ class Skills extends HTMLElement {
             height: 100%;
           }
 
+          // .content .first .techSkills{
+          //   display: grid;
+          //   grid-template-columns: repeat(3, 1fr);
+          //   row-gap: 1rem;
+          // }
+
           .content .first .techSkills{
-            grid-gap: .5rem;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 15%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0rem 2rem;
+            row-gap: .5rem;
           }
           .content .first .techSkills .stack{
             padding-top: 1rem;
             cursor: pointer;
             transition: all .2s ease-in;
+            // height: 40.33%;
+            // width: 40.33%;
+            height: 22vh;
+            width: 33.33vh;
           }
+
 
           .content .first .techSkills .stack:hover{
             border: none;
@@ -153,14 +166,32 @@ class Skills extends HTMLElement {
               grid-template-columns: 1fr;
             }
 
-            .content .first .techSkills{
-              grid-gap: .3rem;
-              height: 30vh;
-            }
+            // .content .first .techSkills{
+            //   grid-gap: .3rem;
+            //   height: 30vh;
+            // }
 
-            .content .first .techSkills .stack{
-              padding: 0 0 .2rem 0;
-            }
+
+            // .content .first .techSkills .stack{
+            //   padding: 0 0 .2rem 0;
+            // }
+            
+          .content .first .techSkills{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0rem .5rem;
+            row-gap: .5rem;
+          }
+          .content .first .techSkills .stack{
+            padding-top: 1rem;
+            cursor: pointer;
+            transition: all .2s ease-in;
+            // height: 40.33%;
+            // width: 40.33%;
+            height: 7vh;
+            width: 10.33vh;
+          }
 
             .content .first .techSkills p{
               font-size: .8rem;
